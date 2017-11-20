@@ -5,7 +5,7 @@ import com.ILogicPart;
 public interface IPassiveLogicPart extends ILogicPart
 {   
     /**
-     * passive parts do not contain logic (stream generators do not count as passive
+     * passive parts normally do not contain logic (stream generators do not count as passive parts)
      */
     @Override
     public default void computeStep()
