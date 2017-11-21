@@ -1,6 +1,6 @@
-package com.streamGenerator;
+package com.parts.streamGenerator;
 
-import com.ILogicPart;
+import com.parts.ILogicPart;
 
 public interface IStreamGeneratorLogicPart extends ILogicPart
 {   

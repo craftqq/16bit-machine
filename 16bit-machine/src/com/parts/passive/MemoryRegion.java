@@ -1,6 +1,6 @@
 package com.parts.passive;
 
-import com.ILogicPart;
+import com.parts.ILogicPart;
 
 public class MemoryRegion implements IPassiveLogicPart
 {
@@ -32,10 +32,10 @@ public class MemoryRegion implements IPassiveLogicPart
     }
     
     @Override
-    public byte[] readFromOutStream(ILogicPart destination)
+    public byte readByteFromOutStream()
     {
-        byte[] retval = new byte[1];
-        retval[0] = region[readLocation];
+        byte retval;
+        retval = region[readLocation];
         return retval;
     }
     

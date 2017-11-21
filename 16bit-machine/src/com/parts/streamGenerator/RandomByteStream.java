@@ -1,8 +1,8 @@
-package com.streamGenerator;
+package com.parts.streamGenerator;
 
 import java.util.Random;
 
-import com.ILogicPart;
+import com.parts.ILogicPart;
 
 public class RandomByteStream implements IStreamGeneratorLogicPart
 {
@@ -31,10 +31,10 @@ public class RandomByteStream implements IStreamGeneratorLogicPart
     }
     
     @Override
-    public byte[] readFromOutStream(ILogicPart destination)
+    public byte readByteFromOutStream()
     {
-        byte[] retval = new byte[1];
-        retval[0] = next;
+        byte retval;
+        retval = next;
         generateNextByte();
         return retval;
     }

@@ -1,6 +1,6 @@
 package com.parts.passive;
 
-import com.ILogicPart;
+import com.parts.ILogicPart;
 
 public interface IPassiveLogicPart extends ILogicPart
 {   
