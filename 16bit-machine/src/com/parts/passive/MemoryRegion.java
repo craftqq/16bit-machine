@@ -25,7 +25,7 @@ public class MemoryRegion implements IPassiveLogicPart
     }
     
     @Override
-    public void writeToInStream(ILogicPart source, byte[] in)
+    public void writeToInStream(byte[] in)
     {
         // TODO add communication logic
         
