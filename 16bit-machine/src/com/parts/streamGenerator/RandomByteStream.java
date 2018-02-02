@@ -7,7 +7,7 @@ import com.parts.ILogicPart;
 public class RandomByteStream implements IStreamGeneratorLogicPart
 {
     private Random generator;
-    private byte next;
+    private int next;
     
     public RandomByteStream()
     {
@@ -21,7 +21,7 @@ public class RandomByteStream implements IStreamGeneratorLogicPart
     
     private void generateNextByte()
     {
-        next = (byte) (generator.nextInt(255) - 128);
+        next = (generator.nextInt(255) - 128);
     }
     
     @Override
@@ -31,9 +31,9 @@ public class RandomByteStream implements IStreamGeneratorLogicPart
     }
     
     @Override
-    public byte readByteFromOutStream()
+    public int readByteFromOutStream()
     {
-        byte retval;
+        int retval;
         retval = next;
         generateNextByte();
         return retval;

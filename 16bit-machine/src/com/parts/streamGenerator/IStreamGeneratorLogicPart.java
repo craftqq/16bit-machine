@@ -8,7 +8,7 @@ public interface IStreamGeneratorLogicPart extends ILogicPart
      * stream generators normally only provide a stream of bytes read from the out stream.
      */
     @Override
-    public default void writeToInStream(byte[] in)
+    public default void writeToInStream(int[] in)
     {
         //NOOP
         return;

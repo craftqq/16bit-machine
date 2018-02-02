@@ -4,9 +4,9 @@ import com.parts.ILogicPart;
 
 public class MemoryRegion implements IPassiveLogicPart
 {
-    private byte[] region;
+    private int[] region;
     private int readLocation;
-    private byte[] inBuffer;
+    private int[] inBuffer;
     
     public MemoryRegion()
     {
@@ -19,22 +19,22 @@ public class MemoryRegion implements IPassiveLogicPart
         {
             throw new IllegalArgumentException("size must be greater than zero");
         }
-        region = new byte[size];
+        region = new int[size];
         readLocation = 0;
-        inBuffer = new byte[5];
+        inBuffer = new int[5];
     }
     
     @Override
-    public void writeToInStream(byte[] in)
+    public void writeToInStream(int[] in)
     {
         // TODO add communication logic
         
     }
     
     @Override
-    public byte readByteFromOutStream()
+    public int readByteFromOutStream()
     {
-        byte retval;
+        int retval;
         retval = region[readLocation];
         return retval;
     }
